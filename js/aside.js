@@ -7,12 +7,12 @@
         tags[tagName] = {
           name: tagName,
           title: "未命名-" + tagName,
-          num: 0
+          number: 0
         }
-      } else if (!tags[tagName].num) {
-        tags[tagName].num = 0
+      } else if (!tags[tagName].number) {
+        tags[tagName].number = 0
       }
-      tags[tagName].num += 1
+      tags[tagName].number += 1
     })
   })
   
@@ -39,7 +39,7 @@
     let span = document.createElement("span")
     a.appendChild(span)
     span.className = "tag-number"
-    span.appendChild(document.createTextNode(tag.num))
+    span.appendChild(document.createTextNode(tag.number))
 
     return fragment
   }
