@@ -1,7 +1,7 @@
 # tang_blog
 # 我的博客
 
-建设中...   
+[建设中...](https://xiaomingtang.github.io/tang_blog/)   
 无框架，无后端及数据库，纯前端个人博客   
 package.json中的依赖不全，还有一个是highlight.js，但是这个包用npm下下来的不会用，官网手动下载的，跟npm中的包不一样，所以没放到package中。   
 由于用了less.js动态样式转换，所以必须运行在服务器上，需要自己搭建。   
