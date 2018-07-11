@@ -1,0 +1,45 @@
+@import "skin.less";
+
+@media screen {
+  .main-aside {
+    padding: 1em;
+    border: 1px solid @color-muted;
+    border-radius: 4px;
+  }
+  @media (min-width: @width-main) {
+    .main-main {
+      width: 70%;
+      float: left;
+    }
+    .main-aside {
+      margin-top: 1em;
+      width: 25%;
+      float: right;
+    }
+  }
+}
+
+.article {
+  padding: 1em 0;
+  border-bottom: 1px solid @color-muted;
+}
+.date {
+  font-size: .8em;
+  color: @color-muted;
+}
+.summary {
+  display: -webkit-box;
+  margin: .5em 0;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.tag-number {
+  display: inline-block;
+  width: 1.5em;
+  margin-left: .5em;
+  text-align: center;
+  color: red;
+  background-color: white;
+  border-radius: 50%;
+}

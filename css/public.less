@@ -1,0 +1,94 @@
+@import "/css/skin.less";
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  line-height: 1.5em;
+  font-size: @font-size-base;
+  color: @color-main;
+  background-color: @bg-page;
+}
+a {
+  color: @color-link;
+  text-decoration: none;
+  background-color: transparent;
+  outline: 0;
+
+  &:hover {
+    color: @color-hover-link;
+    text-decoration: underline;
+  }
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.text-center {
+  text-align: center;
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.main {
+  padding: 0 .5em;
+  width: 100%;
+  max-width: @width-main;
+  margin: auto;
+}
+// header
+@media screen {
+  .header {
+    line-height: 5rem;
+    background-color: @bg-header;
+  }
+  .title-page {
+    float: left;
+    color: @color-title-page;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .nav-list {
+    float: right;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .nav-item {
+    display: inline-block;
+    width: 4em;
+    list-style-type: none;
+
+    &:hover {
+      color: @bg-page;
+      background-color: @color-main;
+    }
+    &.active .nav-link {
+      border-bottom: 2px solid @color-main;
+    }
+  }
+  .nav-link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  @media (max-width: @width-main) {
+
+  }
+}
