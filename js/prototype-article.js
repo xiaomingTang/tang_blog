@@ -4,15 +4,18 @@
   let tags = {
     all: {
       name: "all",
-      title: "all"
+      title: "all",
+      number: 0
     },
     javascript: {
       name: "javascript",
-      title: "js"
+      title: "js",
+      number: 0
     },
     css: {
       name: "css",
-      title: "css"
+      title: "css",
+      number: 0
     }
   }
 
