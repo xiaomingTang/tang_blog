@@ -52,7 +52,7 @@ echo   ^</header^>>>index.html
 echo   ^<article class="main"^>>>index.html
 echo     ^<h2^>%title%^</h2^>>>index.html
 echo     ^<div^>>>index.html
-echo       ^<span class="date"^>2018-05-15^</span^>>>index.html
+echo       ^<span class="date"^>%date:~0,4%-%date:~5,2%-%date:~8,2%^</span^>>>index.html
 echo       ^<span class="tag tag-all"^>all^</span^>>>index.html
 echo     ^</div^>>>index.html
 echo     ^<div class="content" id="content"^>>>index.html
@@ -61,6 +61,7 @@ echo       ^<!-- if highlight needed --^>>>index.html
 echo       ^<!-- ^<pre^>^<code class="lang-js"^>^</code^>^</pre^> --^>>>index.html
 echo.      >>index.html
 echo       ^<!-- 将下面的内容复制到/js/articles.js的合适位置>>index.html
+echo            注意，下面这个new Date()中的月份和日期的前导零要手动删掉。
 echo.      >>index.html
 echo  let a_1 = new Article({>>index.html
 echo    title: "%title%",>>index.html
