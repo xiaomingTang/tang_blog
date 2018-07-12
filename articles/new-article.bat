@@ -53,8 +53,7 @@ echo   ^<article class="main"^>>>index.html
 echo     ^<h2^>%title%^</h2^>>>index.html
 echo     ^<div^>>>index.html
 echo       ^<span class="date"^>2018-05-15^</span^>>>index.html
-echo       ^<span class="tag tag-javascript"^>js^</span^>>>index.html
-echo       ^<span class="tag tag-javascript"^>js^</span^>>>index.html
+echo       ^<span class="tag tag-all"^>all^</span^>>>index.html
 echo     ^</div^>>>index.html
 echo     ^<div class="content" id="content"^>>>index.html
 echo       ^<!-- 正文写在此处 --^>>>index.html
