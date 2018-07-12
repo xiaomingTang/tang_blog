@@ -56,7 +56,7 @@ echo       ^<span class="date"^>2018-05-15^</span^>>>index.html
 echo       ^<span class="tag tag-javascript"^>js^</span^>>>index.html
 echo       ^<span class="tag tag-javascript"^>js^</span^>>>index.html
 echo     ^</div^>>>index.html
-echo     ^<div id="content"^>>>index.html
+echo     ^<div class="content" id="content"^>>>index.html
 echo       ^<!-- 正文写在此处 --^>>>index.html
 echo       ^<!-- if highlight needed --^>>>index.html
 echo       ^<!-- ^<pre^>^<code class="lang-js"^>^</code^>^</pre^> --^>>>index.html
