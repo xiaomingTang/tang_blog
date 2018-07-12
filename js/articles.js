@@ -5,7 +5,7 @@
   /**添加文章的格式如下
    * let a_1 = new Article({
    *   title: "测试标题1",
-   *   date: new Date(2018, 7, 12),
+   *   date: new Date(2018, 6, 12),
    *   tags: ["all", "javascript", "css"],
    *   url: "https://xiaomingtang.github.io/tang_blog/articles/first-article/",
    *   summary: "简介"
@@ -15,7 +15,7 @@
 
   let a_1 = new Article({
     title: "第一篇文章",
-    date: new Date(2018, 7, 12),
+    date: new Date(2018, 6, 12),
     tags: ["all"],
     url: "https://xiaomingtang.github.io/tang_blog/articles/first-article/",
     summary: "参见标题，内详。"
