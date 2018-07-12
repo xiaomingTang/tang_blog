@@ -42,6 +42,43 @@ a {
   max-width: @width-main;
   margin: auto;
 }
+.unselected {
+  -webkit-user-select: none; /*webkit浏览器*/
+   -khtml-user-select: none; /*早期浏览器*/
+     -moz-user-select: none; /*火狐*/
+      -ms-user-select: none; /*IE10*/
+          user-select: none;
+}
+.extra[title] {
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+}
+.deadline {
+  padding: 1em 0;
+  text-align: center;
+  background: url("../assets/dotted-line.svg") repeat-x;
+  background-size: 10px 2px;
+  background-position-y: center;
+  
+  .unselected;
+
+  .deadline-state {
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 4px;
+    background-color: @bg-page;
+  }
+}
+/* webkit, opera, IE9 */
+::selection {
+  color: white;
+  background: #bd2828;
+}
+/* mozilla firefox */
+::-moz-selection {
+  color: white;
+  background: #bd2828;
+}
 // header
 @media screen {
   .header {
