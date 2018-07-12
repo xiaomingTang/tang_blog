@@ -5,14 +5,22 @@
   /**添加文章的格式如下
    * let a_1 = new Article({
    *   title: "测试标题1",
-   *   date: new Date(2013, 5, 23),
+   *   date: new Date(2018, 7, 12),
    *   tags: ["all", "javascript", "css"],
-   *   url: "http://www.baidu.com/",
-   *   summary: "测试简介"
+   *   url: "https://xiaomingtang.github.io/tang_blog/articles/first-article/",
+   *   summary: "简介"
    * })
    * articles.push(a_1)
   */
 
+  let a_1 = new Article({
+    title: "第一篇文章",
+    date: new Date(2018, 7, 12),
+    tags: ["all"],
+    url: "https://xiaomingtang.github.io/tang_blog/articles/first-article/",
+    summary: "参见标题，内详。"
+  })
+  articles.push(a_1)
 
   // 在此之上添加文章到列表
   renderArticles(orderArticlesBy(articles, "TIME"))

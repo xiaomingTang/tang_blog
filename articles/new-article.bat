@@ -1,6 +1,8 @@
 ::注意，为适应window cmd，这里是ansi编码，如果不是，命令行中文会出现乱码，应当修改为ansi
 @echo off
-set /p filename='请输入项目名称'
+set /p filename='请输入文章名称（仅英文）：'
+set /p title='请输入文章标题：'
+
 echo %filename%
 mkdir %filename%
 cd %filename%
@@ -17,7 +19,7 @@ echo ^<html lang="zh-cn" style="background-color: black;"^>>>index.html
 echo ^<head^>>>index.html
 echo   ^<meta charset="utf-8"^>>>index.html
 echo   ^<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"^>>>index.html
-echo   ^<title^>自定义^</title^>>>index.html
+echo   ^<title^>%title%^</title^>>>index.html
 echo   ^<link rel="icon" type="image/x-icon" href="../../favicon.ico"^>>>index.html
 echo   ^<!-- plugins --^>>>index.html
 echo   ^<link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css"^>>>index.html
@@ -48,7 +50,7 @@ echo       ^</ul^>>>index.html
 echo     ^</div^>>>index.html
 echo   ^</header^>>>index.html
 echo   ^<article class="main"^>>>index.html
-echo     ^<h2^>标题标题^</h2^>>>index.html
+echo     ^<h2^>%title%^</h2^>>>index.html
 echo     ^<div^>>>index.html
 echo       ^<span class="date"^>2018-05-15^</span^>>>index.html
 echo       ^<span class="tag tag-javascript"^>js^</span^>>>index.html
@@ -58,6 +60,19 @@ echo     ^<div id="content"^>>>index.html
 echo       ^<!-- 正文写在此处 --^>>>index.html
 echo       ^<!-- if highlight needed --^>>>index.html
 echo       ^<!-- ^<pre^>^<code class="lang-js"^>^</code^>^</pre^> --^>>>index.html
+echo.      >>index.html
+echo       ^<!-- 将下面的内容复制到/js/articles.js的合适位置>>index.html
+echo.      >>index.html
+echo  let a_1 = new Article({>>index.html
+echo    title: "%title%",>>index.html
+echo    date: new Date(%date:~0,4%, %date:~5,2%, %date:~8,2%),>>index.html
+echo    tags: ["all"],>>index.html
+echo    url: "https://xiaomingtang.github.io/tang_blog/articles/%filename%/",>>index.html
+echo    summary: "参见标题，内详。">>index.html
+echo  })>>index.html
+echo  articles.push(a_1)>>index.html
+echo.      >>index.html
+echo       --^>>>index.html
 echo.      >>index.html
 echo     ^</div^>>>index.html
 echo   ^</article^>>>index.html
