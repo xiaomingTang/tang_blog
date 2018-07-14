@@ -24,7 +24,7 @@
 
  let a_2 = new Article({
    title: "web服务器python版",
-   date: new Date(2018, 7, 14),
+   date: new Date(2018, 6, 14),
    tags: ["all", "python"],
    url: "https://xiaomingtang.github.io/tang_blog/articles/pyserver/",
    summary: "web服务器python版，内含python3源码和windows应用下载链接。"
