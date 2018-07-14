@@ -9,12 +9,17 @@
     },
     javascript: {
       name: "javascript",
-      title: "js",
+      title: "JavaScript",
       number: 0
     },
     css: {
       name: "css",
-      title: "css",
+      title: "Css",
+      number: 0
+    },
+    python: {
+      name: "python",
+      title: "Python",
       number: 0
     }
   }

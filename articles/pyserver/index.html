@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="background-color: black;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>web服务器python版</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <!-- plugins -->
+  <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" type="text/less" href="../../node_modules/font-awesome/less/font-awesome.less">
+  <!-- skin -->
+  <link rel="stylesheet" type="text/less" href="../../css/skin.less">
+  <!-- public -->
+  <link rel="stylesheet" type="text/less" href="../../css/public.less">
+  <link rel="stylesheet" type="text/less" href="../../css/article.less">
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/less" href="css/index.less">
+  <!-- if highlight needed -->
+  <!-- <link rel="stylesheet" href="../../node_modules/highlight/styles/tomorrow-night-bright.css"> -->
+  <!-- <link rel="stylesheet" href="../../node_modules/highlight/styles/tomorrow-night.css"> -->
+  <!-- <link rel="stylesheet" href="../../node_modules/highlight/styles/atom-one-dark.css"> -->
+  <link rel="stylesheet" href="../../node_modules/highlight/styles/monokai-sublime.css">
+  <!-- less -->
+  <script src="../../node_modules/less/dist/less.min.js"></script>
+  <!-- promise -->
+  <script src="../../node_modules/es6-promise/dist/es6-promise.auto.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="main header-inner clearfix">
+      <a class="title-page" href="../../"><h1>Tang's blog</h1></a>
+      <ul class="nav-list text-center">
+        <li class="nav-item"><a class="nav-link" href="../../">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+      </ul>
+    </div>
+  </header>
+  <article class="main">
+    <h2>web服务器python版</h2>
+    <div>
+      <span class="date">2018-07-14</span>
+      <span class="tag tag-all">all</span>
+      <span class="tag tag-python">Python</span>
+    </div>
+    <div class="content" id="content">
+      <!-- 正文写在此处 -->
+
+      <pre>
+        <code class="lang-python">
+        
+# https://blog.csdn.net/abcjennifer/article/details/47757881
+# writen by Rachel-Zhang
+
+import sys
+import http.server
+import socket
+import webbrowser
+
+HandlerClass = http.server.SimpleHTTPRequestHandler
+ServerClass  = http.server.HTTPServer
+Protocol     = "HTTP/1.0"
+hostname = socket.gethostbyname(socket.gethostname())
+defaultPort  = 8080
+
+try:
+  port = int(sys.argv[1], base = 10)
+except IndexError:
+  port = defaultPort
+except ValueError:
+  print("invalid input, port has been set to %s" % defaultPort)
+  port = defaultPort
+
+server_address = (hostname, port)
+
+HandlerClass.protocol_version = Protocol
+httpd = ServerClass(server_address, HandlerClass)
+
+webbrowser.open("http://%s:%s/" % server_address)
+# sa = httpd.socket.getsockname()
+print("Serving HTTP at %s:%s..." % server_address)
+httpd.serve_forever()
+        
+        </code>
+      </pre>
+      
+      <p>
+        python3.6版的web服务器，基本借鉴自<a href="https://blog.csdn.net/abcjennifer/article/details/47757881" target="_blank">这篇文章</a>，做了一些针对python3.6的改良。
+      </p>
+      <p>
+        也可在此点击下载
+        <ul>
+          <li><a href="https://xiaomingtang.github.io/tang_blog/articles/pyserver/assets/pyserver-32.exe" target="_blank">window 32位 版本</a></li>
+          <li><a href="https://xiaomingtang.github.io/tang_blog/articles/pyserver/assets/pyserver-64.exe" target="_blank">window 64位 版本</a></li>
+        </ul>
+      </p>
+
+    </div>
+  </article>
+<!-- if highlight needed -->
+<script src="../../node_modules/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src="js/index.js"></script>
+</body>
+</html>

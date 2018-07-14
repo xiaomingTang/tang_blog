@@ -34,6 +34,8 @@ echo   ^<link rel="stylesheet" type="text/less" href="css/index.less"^>>>index.h
 echo   ^<!-- if highlight needed --^>>>index.html
 echo   ^<!-- ^<link rel="stylesheet" href="../../node_modules/highlight/styles/tomorrow-night-bright.css"^> --^>>>index.html
 echo   ^<!-- ^<link rel="stylesheet" href="../../node_modules/highlight/styles/tomorrow-night.css"^> --^>>>index.html
+echo   ^<!-- <link rel="stylesheet" href="../../node_modules/highlight/styles/atom-one-dark.css"^> --^>>>index.html
+echo   ^<!-- <link rel="stylesheet" href="../../node_modules/highlight/styles/monokai-sublime.css"^> --^>>>index.html
 echo   ^<!-- less --^>>>index.html
 echo   ^<script src="../../node_modules/less/dist/less.min.js"^>^</script^>>>index.html
 echo   ^<!-- promise --^>>>index.html
