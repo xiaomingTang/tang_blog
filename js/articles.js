@@ -22,14 +22,23 @@
   })
   articles.push(a_1)
 
- let a_2 = new Article({
-   title: "web服务器python版",
-   date: new Date(2018, 6, 14),
-   tags: ["all", "python"],
-   url: "https://xiaomingtang.github.io/tang_blog/articles/pyserver/",
-   summary: "web服务器python版，内含python3源码和windows应用下载链接。"
- })
- articles.push(a_2)
+  let a_2 = new Article({
+    title: "web服务器python版",
+    date: new Date(2018, 6, 14),
+    tags: ["all", "python"],
+    url: "https://xiaomingtang.github.io/tang_blog/articles/pyserver/",
+    summary: "web服务器python版，内含python3源码和windows应用下载链接。"
+  })
+  articles.push(a_2)
+  
+  let a_3 = new Article({
+    title: "一个随机点名页面",
+    date: new Date(2018, 8, 6),
+    tags: ["all", "javascript", "html"],
+    url: "https://xiaomingtang.github.io/tang_blog/articles/rollcall/",
+    summary: "受好友邀制作的一个随机点名页面。"
+  })
+  articles.push(a_3)
       
   // 在此之上添加文章到列表
   renderArticles(orderArticlesBy(articles, "TIME"))

@@ -66,14 +66,14 @@ echo       ^<!-- 将下面的内容复制到/js/articles.js的合适位置>>index.html
 echo            注意，下面这个new Date()中的月份和日期的前导零要手动删掉。>>index.html
 echo            注意，月份复制到js中要手动减一，这个就不解释了。>>index.html
 echo.      >>index.html
-echo  let a_1 = new Article({>>index.html
-echo    title: "%title%",>>index.html
-echo    date: new Date(%date:~0,4%, %date:~5,2%, %date:~8,2%),>>index.html
-echo    tags: ["all"],>>index.html
-echo    url: "https://xiaomingtang.github.io/tang_blog/articles/%filename%/",>>index.html
-echo    summary: "参见标题，内详。">>index.html
-echo  })>>index.html
-echo  articles.push(a_1)>>index.html
+echo   let a_1 = new Article({>>index.html
+echo     title: "%title%",>>index.html
+echo     date: new Date(%date:~0,4%, %date:~5,2%, %date:~8,2%),>>index.html
+echo     tags: ["all"],>>index.html
+echo     url: "https://xiaomingtang.github.io/tang_blog/articles/%filename%/",>>index.html
+echo     summary: "参见标题，内详。">>index.html
+echo   })>>index.html
+echo   articles.push(a_1)>>index.html
 echo.      >>index.html
 echo       --^>>>index.html
 echo.      >>index.html

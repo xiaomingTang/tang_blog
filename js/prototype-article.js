@@ -21,6 +21,11 @@
       name: "python",
       title: "Python",
       number: 0
+    },
+    html: {
+      name: "html",
+      title: "HTML",
+      number: 0
     }
   }
 
